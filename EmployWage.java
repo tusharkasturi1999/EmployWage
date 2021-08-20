@@ -14,6 +14,7 @@ public class EmployWage {
 		double empcheck = Math.floor(Math.random() * 10) % 2;
 		
 		if (empcheck == IS_FULL_TIME)
+
         {
         	empHrs = FULL_WORKING_DAY;
         	empWage = WAGE_PER_HR * empHrs;
@@ -24,6 +25,7 @@ public class EmployWage {
         	empWage = WAGE_PER_HR * empHrs;
         }
         System.out.println("Employee Wage: Rs.  " + empWage);
+
 	}
 
 }
