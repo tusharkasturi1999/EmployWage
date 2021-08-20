@@ -10,6 +10,7 @@ public class EmployWage {
 
 		int empHrs =0;
         int empWage = 0;
+        int workdays = 20;
 		
 		// Computation
 		double empcheck = Math.floor(Math.random() * 10) % 3;
@@ -32,7 +33,8 @@ public class EmployWage {
 		}
 		
        }
-        System.out.println("Employee Wage: Rs.  " + empWage);
+        System.out.println("Employee Wage per day: Rs.  " + empWage);
+        System.out.println("Employee Wage per Month: Rs.  " + empWage*workdays);
 
 	}
 
