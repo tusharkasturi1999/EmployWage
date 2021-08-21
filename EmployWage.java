@@ -6,9 +6,8 @@ public class EmployWage {
 	public static final int IS_FULL_TIME = 2; // @param IS_FULL_TIME is used to check job status
 	public static final int workdays = 20;
 	public static final int workhours = 100;
-
-	public static void main(String[] args) {
-		System.out.println("Welcome to Employ Wage");
+	
+	public static void calculation() {
 
 		int totalwage =0;
 		int empHrs = 0;
@@ -50,6 +49,13 @@ public class EmployWage {
 		}
 		System.out.println("Employee Wage per Month: Rs.  " + totalwage);
 
+	}
+	
+		
+
+	public static void main(String[] args) {
+		System.out.println("Welcome to Employ Wage");
+		calculation();
 	}
 
 }
