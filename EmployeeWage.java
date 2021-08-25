@@ -29,7 +29,7 @@ public class EmployeeWage
 	@Override
 	public String toString()
 	{
-		return "Total Emp Wage for compay: "+company+ "is: "+Total_Wage;
+		return "Total Emp Wage for compay: "+company+ " is: "+Total_Wage;
 	}
 }
 
