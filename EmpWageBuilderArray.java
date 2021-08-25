@@ -35,7 +35,6 @@ public class EmpWageBuilderArray
 		int Emp_Hrs=0;		
 		int TotalEmpHrs=0;
 		int TotalWorkingDays=0; 
-		
 		//computation
 		while(TotalEmpHrs<= employeewage.MAX_HRS_IN_MONTH && TotalWorkingDays<employeewage.NUM_WORKING_DAYS)
 		{
