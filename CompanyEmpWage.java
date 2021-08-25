@@ -2,7 +2,8 @@ package com.employeeWage;
 
 
 
-public class CompanyEmpWage
+
+public class CompanyEmpWage 
 {
 	public final String company;
 	public final int EMP_RATE_PER_HOUR;

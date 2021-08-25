@@ -15,10 +15,9 @@ public class EmployeeWageBuilder implements IComputeEmpWage
 	public EmployeeWageBuilder()
 	{
 		companyEmpWageList =new LinkedList<>();
-		companyToEmpWageMap =new HashMap<>();
-		
+		companyToEmpWageMap =new HashMap<>();		
 	}
-	
+
 	public void addCompanyEmpWage(String company,int EMP_RATE_PER_HOUR,int NUM_WORKING_DAYS,int MAX_HRS_IN_MONTH)
 	{
 		CompanyEmpWage companyEmpWage =new CompanyEmpWage(company, EMP_RATE_PER_HOUR,NUM_WORKING_DAYS,MAX_HRS_IN_MONTH);
@@ -34,6 +33,12 @@ public class EmployeeWageBuilder implements IComputeEmpWage
 			companyEmpWage.setTotalEmpWage(this.computeEmpWage(companyEmpWage));
 			System.out.println(companyEmpWage);
 		}
+	}
+	
+	@Override
+	public  int getTotalWage(String company)
+	{
+		return companyToEmpWageMap.get(company).Total_Wage;
 	}
 	//method for calculating employee wages for different companies
 	private int computeEmpWage(CompanyEmpWage companyEmpWage)
@@ -55,7 +60,7 @@ public class EmployeeWageBuilder implements IComputeEmpWage
 			default: Emp_Hrs=0;
 			}
 			TotalEmpHrs+=Emp_Hrs;
-			System.out.println("Day "+TotalWorkingDays+" Emp Hr: "+TotalEmpHrs);
+			System.out.println("Day"+TotalWorkingDays+" Emp Hr: "+TotalEmpHrs);
 			dailywage=Emp_Hrs*companyEmpWage.EMP_RATE_PER_HOUR;
 			System.out.println("Daily wage is "+dailywage);
 		}
@@ -64,15 +69,13 @@ public class EmployeeWageBuilder implements IComputeEmpWage
 					
 	}
 				
-	
 	public static void main(String[] args) 
 	{
-	
 		EmployeeWageBuilder empWageBuilder =new EmployeeWageBuilder();
 		
 		empWageBuilder.addCompanyEmpWage("DMart",20,2,10);
 		empWageBuilder.addCompanyEmpWage("Reliance",10,4,20);
 		empWageBuilder.computeEmpWage();
-			
+		System.out.println("Total wage for DMArt Company: "+ empWageBuilder.getTotalWage("DMart"));	
 	}
 }
