@@ -1,7 +1,8 @@
 package com.employeeWage;
 
 
-public class CompanyEmpWage 
+
+public class CompanyEmpWage
 {
 	public final String company;
 	public final int EMP_RATE_PER_HOUR;
@@ -23,7 +24,7 @@ public class CompanyEmpWage
 	}
 	
 	@Override
-	public String toString() 
+	public String toString()
 	{
 		return "Total Emp Wage for compay: "+company+ "is: "+Total_Wage;
 	}

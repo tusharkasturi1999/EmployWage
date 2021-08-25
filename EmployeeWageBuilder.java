@@ -1,7 +1,6 @@
 package com.employeeWage;
 
 import java.util.*;
-
 public class EmployeeWageBuilder implements IComputeEmpWage
 {
 	//class members
